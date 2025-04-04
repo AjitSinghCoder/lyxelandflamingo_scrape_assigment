@@ -20,19 +20,19 @@ A FastAPI-based web scraping backend that extracts product names and prices
 2. Create virtual environment:
 
    ```
-    pip venv -m venv
+    python3 -m venv myenv
    ```
 3. Activate environment
    (a) For Linux / mac  OS
 
    ```
-     source venv/bin/activate
+     source myenv/bin/activate
    ```
 
    (b) For Windows OS
 
    ```
-     venv\Scripts\activate
+     myenv\Scripts\activate
    ```
 4. Install Python dependencies:
 
@@ -42,7 +42,7 @@ A FastAPI-based web scraping backend that extracts product names and prices
 5. Set environment variables:
 
    ```
-   Create .env file in root directory add required data 
+   Create .env file in root directory (lyxelandflamingo_scrape_assigment/.env) add required  variable
    As per the sample.env file 
    ```
 6. Start the FastAPI server:
