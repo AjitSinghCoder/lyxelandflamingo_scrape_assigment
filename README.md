@@ -16,15 +16,14 @@ A FastAPI-based web scraping backend that extracts product names and prices
 
 ### Installation and Setup
 
-1. Install MongoDB and Redis on your system
+1. Install MongoDB
 2. Create virtual environment:
 
    ```
     python3 -m venv myenv
    ```
 3. Activate environment
-   (a) For Linux / mac  OS
-
+   (a) For Linux / macos
    ```
      source myenv/bin/activate
    ```
@@ -37,7 +36,7 @@ A FastAPI-based web scraping backend that extracts product names and prices
 4. Install Python dependencies:
 
    ```
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 5. Set environment variables:
 
@@ -72,3 +71,7 @@ A FastAPI-based web scraping backend that extracts product names and prices
         If the scraping is not yet completed, it will return status: "pending" with an empty data field.
 
       The "/logs" API returns a log of all requests, showing how many times you have requested scraped data.
+
+
+## Do you want to check for pending status  you have to add time.sleep() inside scrape_products function
+  
