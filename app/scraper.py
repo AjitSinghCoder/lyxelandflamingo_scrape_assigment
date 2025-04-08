@@ -10,7 +10,6 @@ def scrape_products(request_id: str, url: str):
     Scrape product data from the specified URL
     """
     try:
-        print("I am here")
         # Get the scraping request document
         scraping_request = ScrapingRequest.objects(request_id=request_id).first()
         if not scraping_request:
@@ -57,6 +56,7 @@ def scrape_products(request_id: str, url: str):
             prepare_data = {"product_name" : name.strip(), "price" :price}
             products_data.append(prepare_data)
 
+        
         # Update the document with the scraped data
         scraping_request.data = products_data
         scraping_request.status = "finished"

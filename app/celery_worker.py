@@ -4,11 +4,12 @@ from app.config import CELERY_BROKER_URL, CELERY_RESULT_BACKEND
 
 # Initialize Celery app
 celery_app = Celery(
-    'scraper_worker',
+    'worker',
     broker=CELERY_BROKER_URL,
-    backend=CELERY_RESULT_BACKEND
+    backend=CELERY_RESULT_BACKEND  ,
 )
-@celery_app.task(name='tasks.scrape_url')
+
+@celery_app.task(name='tasks.scrape_url' )
 def scrape_url(request_id: str, url: str):
     " It run task async"
     scrape_products(request_id, url)

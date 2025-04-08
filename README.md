@@ -20,7 +20,7 @@ A FastAPI-based web scraping backend that extracts product names and prices
 2. Create virtual environment:
 
    ```
-    pip venv -m venv
+    python -m venv venv
    ```
 3. Activate environment
    (a) For Linux / mac  OS
@@ -42,7 +42,7 @@ A FastAPI-based web scraping backend that extracts product names and prices
 5. Set environment variables:
 
    ```
-   Create .env file in root directory add required data 
+   Create .env file in root directory add required variable  
    As per the sample.env file 
    ```
 6. Start the FastAPI server:
@@ -63,12 +63,12 @@ A FastAPI-based web scraping backend that extracts product names and prices
     Brief:
       First, send a POST request to the "/scrap" API with a URL from the following list:
 
-      "https://webscraper.io/test-sites/e-commerce/allinone/computers/tablets"
+    "https://webscraper.io/test-sites/e-commerce/allinone/computers/tablets"
       "https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops"
       "https://webscraper.io/test-sites/e-commerce/allinone/phones/touch"
 
-      In the response, the API will return a unique request_id. Use this request_id to send a GET request to the "/result" API.
+    In the response, the API will return a unique request_id. Use this request_id to send a GET request to the "/result" API.
         If the scraping is completed, it will return status: "finished" along with the scraped data.
         If the scraping is not yet completed, it will return status: "pending" with an empty data field.
 
-      The "/logs" API returns a log of all requests, showing how many times you have requested scraped data.
+    The "/logs" API returns a log of all requests, showing how many times you have requested scraped data.

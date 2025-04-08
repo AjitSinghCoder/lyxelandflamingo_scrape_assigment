@@ -1,5 +1,6 @@
+from typing import Dict, List
 from pydantic import BaseModel, HttpUrl
-from typing import List, Dict
+
 
 class ScrapeRequest(BaseModel):
     url: HttpUrl
@@ -18,3 +19,4 @@ class LogEntry(BaseModel):
 
 class LogsResponse(BaseModel):
     data: List[LogEntry]
+
